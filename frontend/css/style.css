@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
  
 }
 body {
@@ -11,7 +10,11 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: rgb(182, 206, 209);
+  background-color: white;
+}
+
+h1 {
+  color: #ADC7CB;
 }
 
 main {
@@ -85,6 +88,8 @@ h1 {
 }
 .button-container button:nth-of-type(2):hover {
   background-color: #ff3333;
+  width: 30px;
+  height: 30px;
 }
 
 button:not(#closeButton, .button-container button:nth-of-type(2)){
@@ -97,14 +102,16 @@ button:not(#closeButton, .button-container button:nth-of-type(2)){
   background-color: white;
   cursor: pointer;
   transition: .3s;
-  color: #2d61f1;;
+  color: #ADC7CB;
   box-shadow: 2px 2px 5px rgba(130, 130, 130, 0.6);
 }
 
 
 button:hover:not(#closeButton, .button-container button:nth-of-type(2)) {
-  background-color: #2d61f1;;
+  background-color: #ADC7CB;
+  
   color: white;
+  
 }
 
 button:focus:not(#closeButton),
@@ -123,7 +130,7 @@ button:focus-visible:not(#closeButton) {
 }
 
 button#add {
-  background-color:#2d61f1;
+  background-color:#ADC7CB;
   width: 100%;
   color: white;
   transition: .3s;
@@ -132,8 +139,9 @@ button#add {
 
 button#add:hover {
   background-color: white;
-  color: #2d61f1;
+  color: #ADC7CB;
   outline: none;
+  font-size: 1em;
 }
 
 button#reset {
@@ -152,10 +160,15 @@ label {
   font-weight: 600;
 }
 
+#foodList {
+  background-color: none;
+}
+
 button#reset:hover {
-  color: #2d61f1;;
+  color: #ff3333;
   background-color: transparent;
-  color: white;
+  font-size: 1em;
+  
 }
 
 #reset:focus, #reset:focus-visible {
