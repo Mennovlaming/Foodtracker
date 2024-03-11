@@ -1,0 +1,217 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+ 
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(182, 206, 209);
+}
+
+main {
+  flex-direction: column;
+  margin: 0;
+  display: flex;
+  align-items: left;
+  width: 80%;
+}
+
+ul {
+  padding: 0;
+  transition: .5s;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+section {
+  display: flex;
+  gap: 5em;
+  width: 100%;
+  margin-bottom: 2em;
+  transition: .5s;
+}
+
+section ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  transition: .5s;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#totalValues li {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+.button-container {
+  position: relative;
+  margin: .5em .5em;
+}
+.button-container button:nth-of-type(2){
+  color: white;
+  font-weight: 800;
+  position: absolute;
+  background-color: black;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 2px 2px 5px rgba(130, 130, 130, 0.6);
+  width: 25px;
+  height: 25px;
+  transition: .2s;
+
+  bottom: 18px;
+  left: 85%;
+}
+.button-container button:nth-of-type(2):hover {
+  background-color: #ff3333;
+}
+
+button:not(#closeButton, .button-container button:nth-of-type(2)){
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: .3s;
+  color: #2d61f1;;
+  box-shadow: 2px 2px 5px rgba(130, 130, 130, 0.6);
+}
+
+
+button:hover:not(#closeButton, .button-container button:nth-of-type(2)) {
+  background-color: #2d61f1;;
+  color: white;
+}
+
+button:focus:not(#closeButton),
+button:focus-visible:not(#closeButton) {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#closeButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#closeButton img{
+  width: 33px;
+}
+
+button#add {
+  background-color:#2d61f1;
+  width: 100%;
+  color: white;
+  transition: .3s;
+  border: none;
+}
+
+button#add:hover {
+  background-color: white;
+  color: #2d61f1;
+  outline: none;
+}
+
+button#reset {
+  margin-bottom: .5em;
+  background-color: transparent;
+  text-align: left;
+  padding: 0;
+  text-decoration: underline;
+  border: none;
+  width: 5em;
+  box-shadow: none;
+}
+
+label {
+  color: black;
+  font-weight: 600;
+}
+
+button#reset:hover {
+  color: #2d61f1;;
+  background-color: transparent;
+  color: white;
+}
+
+#reset:focus, #reset:focus-visible {
+  outline: none;
+}
+
+#closeButton {
+  position: absolute;
+  z-index: 99;
+  top: 10px;
+  right: 10px;
+}
+
+.popUp {
+  display: none;
+  position: relative;
+  width: 500px;
+  margin-top: 1em;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(130, 130, 130, 0.6);
+}
+
+.popUp.openPopUp {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+body:has(.openPopUp) h1,
+body:has(.openPopUp) ul,
+body:has(.openPopUp) section,
+body:has(.openPopUp) #reset,
+body:has(.openPopUp) #add {
+  filter: blur(10px);
+} 
+
+form {
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+button#submitButton {
+  width: 200px;
+}
+
+input {
+  width: 180px;
+  padding: .5em 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  box-shadow: 2px 2px 5px rgba(130, 130, 130, 0.6);
+}

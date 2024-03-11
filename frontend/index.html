@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodtracker</title>
+  </head>
+  <body>
+    <main>
+      <h1>
+        Foodtracker
+      </h1>
+      
+        <ul id="totalValues">
+          <li id="energy">0 kcal</li>
+          <li id="protein">0g eiwit</li>
+        </ul>
+      
+      <section>
+        <ul id="foodList">
+          <!-- dynamische buttons -->
+        </ul>
+      </section>
+      <button id="reset">Reset</button>
+
+      <button id="add">voeg toe</button>
+
+      <article class="popUp">
+        <form method="POST" action="/createMeal" class="createMealForm">
+          <label>
+            Gerecht naam:<br>
+            <input type="text" name="title">
+          </label>
+          <label>
+            Kcal: <br>
+            <input type="number" name="kcal">
+          </label>
+          <label>
+            Eiwit in grammen:<br>
+            <input type="number" name="protein">
+          </label>
+          <button id="submitButton">Voeg toe</button>
+        </form>
+        <button id="closeButton"><img src="/delete.png" alt=""></button>
+      </article>
+
+  
+  </main>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
+
